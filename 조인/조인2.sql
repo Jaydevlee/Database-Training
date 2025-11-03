@@ -1,4 +1,4 @@
-/* 표준 SQL 문법활용 조인 */
+/* 표준 SQL 문법활용 조인 (가급적이면 표준 SQL활용)*/
 -- NATURAL JOIN(등가 조인)
 SELECT E.EMPNO, E.ENAME, E.JOB, E.MGR, E.HIREDATE, E.SAL, E.COMM,
        DEPTNO, D.DNAME, D.LOC
