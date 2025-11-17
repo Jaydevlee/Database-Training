@@ -26,6 +26,11 @@ INSERT INTO BOOK VALUES('ISBN1236', '파이썬 프로그래밍', 30000, '최성�
 
 select * from book;
 
+alter table book modify b_description varchar2(2000);
+
+commit;
+
+
 
 
 
