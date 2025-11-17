@@ -1,9 +1,9 @@
 CREATE TABLE BOOK(
   b_id varchar2(10) primary Key,
-  b_name varchar2(20),
+  b_name varchar2(30),
   b_unitprice number,
   b_author varchar2(20) ,  
-  b_descripton varchar2(1000),
+  b_descripton varchar2(2000),
   b_publisher varchar2(20),
   b_category varchar2(20),
   b_unitinstock NUMBER(30),
