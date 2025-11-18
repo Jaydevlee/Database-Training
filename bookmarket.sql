@@ -30,7 +30,40 @@ alter table book modify b_description varchar2(2000);
 
 commit;
 
+create table Board(
+ board_no number,
+ board_title varchar2(50) NOT NULL,
+ board_content varchar2(3000),
+ board_writer varchar2(30) NOT NULL,
+ board_regdate varchar2(20),
+ board_fileName varchar2(255)
+);
+DESC BOARD;
 
+INSERT INTO Board (board_no, board_title, board_content, board_writer, board_regdate)
+VALUES('1', '자바 마스터 책 추천합니다.', '내용이 좋아요.', '홍길동', '2025-11-06');
 
+INSERT INTO Board (board_no, board_title, board_content, board_writer, board_regdate)
+VALUES('2', 'C# 프로그래밍 책 구성에 대해 건의 드립니다.', '내용이 좋아요.', '홍길동', '2025-11-06');
 
+INSERT INTO Board (board_no, board_title, board_content, board_writer, board_regdate)
+VALUES('3', '파이썬 프로그래밍 내용이 알찹니다.', '내용이 좋아요.', '홍길동', '2025-11-06');
 
+ALTER TABLE BOARD MODIFY board_regdate NOT NULL;
+SELECT * FROM BOARD;
+
+CREATE TABLE MEMBER(
+  id VARCHAR2(10) PRIMARY KEY,
+  password VARCHAR2(20) NOT NULL,
+  name VARCHAR2(20) NOT NULL,
+  gender VARCHAR2(4),
+  birth VARCHAR2(10),
+  mail VARCHAR2(30),
+  phone VARCHAR2(20),
+  address VARCHAR2(90),
+  reqist_day VARCHAR2(50)
+);
+
+select * from member;
+
+ALTER TABLE MEMBER RENAME COLUMN reqist_day to regist_day;
