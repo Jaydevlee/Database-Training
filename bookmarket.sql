@@ -40,6 +40,8 @@ create table Board(
 );
 DESC BOARD;
 
+SELECT * FROM BOARD ORDER BY board_no DESC;
+
 INSERT INTO Board (board_no, board_title, board_content, board_writer, board_regdate)
 VALUES('1', '자바 마스터 책 추천합니다.', '내용이 좋아요.', '홍길동', '2025-11-06');
 
@@ -67,3 +69,5 @@ CREATE TABLE MEMBER(
 select * from member;
 
 ALTER TABLE MEMBER RENAME COLUMN reqist_day to regist_day;
+
+SELECT * FROM bookmarket.board;
