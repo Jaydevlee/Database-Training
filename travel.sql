@@ -7,8 +7,10 @@ CREATE TABLE tr_member(
     tr_mem_phone VARCHAR2(20),
     tr_mem_level NUMBER
 );
-
+desc tr_member;
 SELECT * FROM tr_member;
+
+
 DESC TR_MEMBER;
 CREATE SEQUENCE tr_member_seq
   START WITH 1
@@ -18,3 +20,5 @@ CREATE SEQUENCE tr_member_seq
   
 ALTER TABLE tr_member modify tr_mem_phone NOT NULL;
 ALTER TABLE tr_member modify tr_mem_phone VARCHAR2(30);
+
+SELECT * FROM tr_member WHERE tr_mem_id = 'test1234';
