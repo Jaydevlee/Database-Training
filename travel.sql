@@ -8,7 +8,8 @@ CREATE TABLE tr_member(
     tr_mem_level NUMBER
 );
 desc tr_member;
-SELECT * FROM tr_member;
+SELECT * FROM tr_member ORDER BY tr_mem_no DESC;
+DROP TABLE TR_MEMBER_TEST;
 
 
 DESC TR_MEMBER;
@@ -17,8 +18,13 @@ CREATE SEQUENCE tr_member_seq
   INCREMENT BY 1
   NOCACHE;
   TRUNCATE TABLE tr_member;
+
   
 ALTER TABLE tr_member modify tr_mem_phone NOT NULL;
 ALTER TABLE tr_member modify tr_mem_phone VARCHAR2(30);
 
 SELECT * FROM tr_member WHERE tr_mem_id = 'test1234';
+
+ALTER TABLE tr_member ADD tr_mem_pic VARCHAR2(50 BYTE);
+
+truncate table tr_member;
