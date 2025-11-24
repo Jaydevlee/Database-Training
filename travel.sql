@@ -4,8 +4,9 @@ CREATE TABLE tr_member(
     tr_mem_password VARCHAR2(20),
     tr_mem_name VARCHAR2(20),
     tr_mem_email VARCHAR2(20),
-    tr_mem_phone VARCHAR2(20),
-    tr_mem_level NUMBER
+    tr_mem_phone VARCHAR2(30),
+    tr_mem_level NUMBER,
+    tr_mem_pic
 );
 desc tr_member;
 SELECT * FROM tr_member ORDER BY tr_mem_no DESC;
